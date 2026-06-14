@@ -1,0 +1,22 @@
+[project]
+name = "multi-agent-test-gen"
+version = "0.1.0"
+description = "Orchestrate a fleet of AI agents to generate, critique, and verify a pytest suite for any Python module."
+authors = [{ name = "Dan Ilushin" }]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.40"]
+
+[project.scripts]
+mate = "mate.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["mate"]
